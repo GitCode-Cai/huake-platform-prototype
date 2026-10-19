@@ -1,0 +1,8 @@
+# 统一换行，避免 Windows/Linux 混用导致 diff 噪音
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.pdf binary
+*.docx binary
+*.doc binary

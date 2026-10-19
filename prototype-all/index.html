@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业数字化平台 · 业务原型</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="shell.css">
+</head>
+<body>
+  <div class="shell" id="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">联</div>
+        <div class="brand-text">
+          <b>企业数字化平台</b>
+          <small>统一原型外壳 v0.1</small>
+        </div>
+      </div>
+      <div class="side-scroll" id="nav"></div>
+      <div class="side-foot">
+        <span>折叠侧边栏</span>
+        <span class="kbd">Ctrl</span><span>+</span><span class="kbd">B</span>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" data-act="collapse" title="折叠 / 展开侧边栏（Ctrl+B）">
+          <span id="collapse-icon">«</span>
+        </button>
+        <div class="crumb" id="crumb"></div>
+        <div class="spacer"></div>
+        <button class="btn-plain" data-act="glossary">名词解释</button>
+        <span class="pill"><i class="dot"></i>演示数据</span>
+        <span class="clock" id="clock"></span>
+        <div class="user">
+          <span class="avatar" id="avatar">张</span>
+          <span id="actor">张伟（平台管理员）</span>
+        </div>
+        <button class="icon-btn" data-act="new-window" title="在新窗口打开当前页面">↗</button>
+      </header>
+
+      <div class="stage-wrap">
+        <iframe class="stage" id="stage" title="模块内容"></iframe>
+        <div class="loading" id="loading"><span class="spinner"></span>正在打开模块…</div>
+      </div>
+    </div>
+
+    <div class="scrim" data-close-mobile></div>
+  </div>
+
+  <div class="gloss" id="gloss">
+    <div class="gloss__scrim" data-act="gloss-close"></div>
+    <aside class="gloss__panel">
+      <div class="gloss__head">
+        <div><b>名词解释</b><span>看不懂的词，这里都换成了白话</span></div>
+        <button class="gloss__close" data-act="gloss-close" aria-label="关闭">×</button>
+      </div>
+      <div class="gloss__body" id="gloss-body"></div>
+    </aside>
+  </div>
+
+  <script src="shell.js"></script>
+</body>
+</html>

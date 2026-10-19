@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>企业数字化平台 · 业务原型</title>
+  <meta http-equiv="refresh" content="0;url=prototype-all/index.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root { --brand:#2f5bd7; --ink:#1c2536; --muted:#7a869c; --line:#e6eaf2; --bg:#f4f6fb; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+      font: 14px/1.6 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      display: grid; place-items: center; padding: 24px;
+    }
+    .box { text-align: center; max-width: 520px; }
+    .logo {
+      width: 46px; height: 46px; border-radius: 12px; margin: 0 auto 14px;
+      background: linear-gradient(135deg, #2f5bd7, #4f8cff); color: #fff;
+      display: grid; place-items: center; font-weight: 700; font-size: 18px;
+      box-shadow: 0 8px 20px rgba(47,91,215,.28);
+    }
+    h1 { font-size: 18px; margin: 0 0 6px; }
+    p { color: var(--muted); font-size: 13px; margin: 0 0 18px; }
+    a.btn {
+      display: inline-block; padding: 9px 16px; border-radius: 8px;
+      background: var(--brand); color: #fff; text-decoration: none; font-size: 13px;
+    }
+    a.link { display: block; margin-top: 12px; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="logo">联</div>
+    <h1>正在打开统一原型外壳…</h1>
+    <p>一个侧边栏装两个模块：基础支撑管理 + 数据可视化系统</p>
+    <a class="btn" href="prototype-all/index.html">如果没自动跳转，点这里</a>
+    <a class="link" href="prototype/index.html">或单独打开「基础支撑管理」</a>
+    <a class="link" href="prototype-viz/index.html">或单独打开「数据可视化系统」</a>
+  </div>
+  <script>
+    location.replace("prototype-all/index.html");
+  </script>
+</body>
+</html>

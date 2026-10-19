@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基础支撑管理 · 业务原型 v0.1</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <div class="sidebar__logo">支</div>
+        <div class="sidebar__title">
+          企业数字化平台
+          <small>基础支撑管理 · 业务原型 v0.1</small>
+        </div>
+      </div>
+      <nav class="nav" id="nav"></nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="crumb" id="crumb"></div>
+        <div class="topbar__spacer"></div>
+        <span class="demo-pill"><i class="dot"></i>演示数据 · 非真实系统</span>
+        <span class="clock" id="clock"></span>
+        <div class="user"><span class="avatar">张</span>张伟（平台管理员）</div>
+      </header>
+      <main class="content" id="content"></main>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <div id="drawer-root"></div>
+
+  <noscript>
+    <div style="padding:40px;font-family:sans-serif">这个原型需要启用 JavaScript 才能运行。</div>
+  </noscript>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      var el = document.getElementById("clock");
+      function tick() {
+        var d = new Date();
+        function p(n) { return n < 10 ? "0" + n : n; }
+        el.textContent = d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) +
+          " " + p(d.getHours()) + ":" + p(d.getMinutes());
+      }
+      tick();
+      setInterval(tick, 20000);
+    })();
+  </script>
+</body>
+</html>
